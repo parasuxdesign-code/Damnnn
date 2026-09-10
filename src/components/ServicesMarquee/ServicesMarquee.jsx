@@ -1,3 +1,5 @@
+import InlineSvg from '../Icon/InlineSvg.jsx';
+import asteriskSmallSvg from '../../assets/icons/asterisk-small.svg?raw';
 import './ServicesMarquee.css';
 
 const SERVICES = [
@@ -17,13 +19,7 @@ export default function ServicesMarquee() {
         {SERVICES.map((service) => (
           <li key={service} className="services-marquee__item">
             <span>{service}</span>
-            <img
-              className="services-marquee__dot"
-              src="/assets/Asterisk mark (small).svg"
-              alt=""
-              width={41}
-              height={41}
-            />
+            <InlineSvg raw={asteriskSmallSvg} size={41} className="services-marquee__dot" />
           </li>
         ))}
       </ul>

@@ -1,4 +1,6 @@
 import HeroVideo from './HeroVideo.jsx';
+import InlineSvg from '../Icon/InlineSvg.jsx';
+import asteriskLargeSvg from '../../assets/icons/asterisk-large.svg?raw';
 import './Hero.css';
 
 export default function Hero() {
@@ -15,13 +17,7 @@ export default function Hero() {
         />
 
         <div className="hero__pitch">
-          <img
-            className="hero__asterisk"
-            src="/assets/Asterisk mark (large).svg"
-            alt=""
-            width={98}
-            height={98}
-          />
+          <InlineSvg raw={asteriskLargeSvg} className="hero__asterisk" />
           <div className="hero__pitch-copy">
             <p className="hero__tagline">
               <span className="hero__tagline-line">You bring the vision</span>

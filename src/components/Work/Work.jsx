@@ -1,4 +1,7 @@
 import Icon from '../Icon/Icon.jsx';
+import InlineSvg from '../Icon/InlineSvg.jsx';
+import carouselPrevSvg from '../../assets/icons/carousel-prev.svg?raw';
+import carouselNextSvg from '../../assets/icons/carousel-next.svg?raw';
 import './Work.css';
 
 const PROJECTS = [
@@ -19,10 +22,10 @@ export default function Work() {
           <div className="work__controls">
             <span className="work__counter">1/6</span>
             <button type="button" className="work__nav-btn" aria-label="Previous project">
-              <img src="/assets/Carousel nav — previous.svg" alt="" width={88} height={88} />
+              <InlineSvg raw={carouselPrevSvg} size={88} className="icon-carousel-prev" />
             </button>
             <button type="button" className="work__nav-btn" aria-label="Next project">
-              <img src="/assets/Carousel nav — next.svg" alt="" width={88} height={88} />
+              <InlineSvg raw={carouselNextSvg} size={88} className="icon-carousel-next" />
             </button>
           </div>
         </div>
@@ -35,7 +38,8 @@ export default function Work() {
                 <h3 className="work__card-title">{project.title}</h3>
                 <p className="work__card-summary">{project.summary}</p>
               </div>
-              {/* Frame 447 (arrow-circle, node 2329:200) not supplied yet — Material Symbol kept as placeholder */}
+              {/* Frame 447 (arrow-circle, node 2329:200) has no supplied Figma asset —
+                  generic Material Symbol used since this is not brand/decorative artwork. */}
               <span className="work__card-link" aria-hidden="true">
                 <Icon name="north_east" size={18} />
               </span>

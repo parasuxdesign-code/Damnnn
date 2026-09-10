@@ -1,3 +1,7 @@
+import InlineSvg from '../Icon/InlineSvg.jsx';
+import menuSvg from '../../assets/icons/menu.svg?raw';
+import equalizerSvg from '../../assets/icons/equalizer.svg?raw';
+import vinylSvg from '../../assets/icons/vinyl.svg?raw';
 import './Header.css';
 
 export default function Header() {
@@ -9,16 +13,16 @@ export default function Header() {
             <img src="/assets/DAMNNN..svg" alt="DAMNNN." width={82} height={21} />
           </a>
           <button className="site-header__menu-toggle" aria-label="Toggle menu">
-            <img src="/assets/Menu icon.svg" alt="" width={24} height={24} />
+            <InlineSvg raw={menuSvg} size={24} className="icon-menu" />
           </button>
         </div>
 
         <div className="site-header__actions">
           <button className="site-header__action-btn" aria-label="Toggle sound">
-            <img src="/assets/Equalizer icon.svg" alt="" width={24} height={24} />
+            <InlineSvg raw={equalizerSvg} size={24} className="icon-equalizer" />
           </button>
           <button className="site-header__action-btn" aria-label="Play showreel">
-            <img src="/assets/Vnyl.svg" alt="" width={32} height={32} />
+            <InlineSvg raw={vinylSvg} size={32} className="icon-vinyl" />
           </button>
         </div>
       </div>

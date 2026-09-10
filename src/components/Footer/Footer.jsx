@@ -1,10 +1,7 @@
+import InlineSvg from '../Icon/InlineSvg.jsx';
+import instagramSvg from '../../assets/icons/instagram.svg?raw';
+import globeEmailSvg from '../../assets/icons/globe-email.svg?raw';
 import './Footer.css';
-
-const SOCIALS = [
-  { label: 'Instagram', icon: '/assets/Instagram icon.svg', href: '#' },
-  { label: 'LinkedIn', icon: '/assets/LinkedIn icon (footer).png', href: '#' },
-  { label: 'Email us', icon: '/assets/Globe:email icon.svg', href: 'mailto:hello@damnnn.studio' },
-];
 
 export default function Footer() {
   return (
@@ -24,14 +21,24 @@ export default function Footer() {
         </div>
 
         <ul className="site-footer__socials">
-          {SOCIALS.map((social) => (
-            <li key={social.label}>
-              <a href={social.href} className="site-footer__social-link">
-                <img src={social.icon} alt="" width={28} height={28} />
-                {social.label}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a href="#" className="site-footer__social-link">
+              <InlineSvg raw={instagramSvg} size={28} className="icon-instagram" />
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" className="site-footer__social-link">
+              <img src="/assets/LinkedIn icon (footer).png" alt="" width={28} height={28} />
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@damnnn.studio" className="site-footer__social-link">
+              <InlineSvg raw={globeEmailSvg} size={28} className="icon-globe-email" />
+              Email us
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

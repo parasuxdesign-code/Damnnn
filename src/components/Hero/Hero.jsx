@@ -1,4 +1,5 @@
 import HeroVideo from './HeroVideo.jsx';
+import HeroOverlay from './HeroOverlay.jsx';
 import InlineSvg from '../Icon/InlineSvg.jsx';
 import asteriskLargeSvg from '../../assets/icons/asterisk-large.svg?raw';
 import './Hero.css';
@@ -7,6 +8,7 @@ export default function Hero() {
   return (
     <section className="hero" aria-label="Introduction">
       <HeroVideo />
+      <HeroOverlay />
       <div className="container hero__content">
         <img
           className="hero__logo-block js-enter"

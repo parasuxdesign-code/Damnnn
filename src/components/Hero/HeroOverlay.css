@@ -1,0 +1,20 @@
+/**
+ * Sits at the boundary between the left content zone and the right
+ * video zone (see Hero.css / HeroVideo.css — the video occupies the
+ * right 50% of .hero). Fades from the Hero's own background red on the
+ * left to fully transparent before the video's midpoint, so the video
+ * stays visible on its right side while the content edge blends into
+ * it rather than the two zones reading as disconnected blocks.
+ */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(130, 27, 27, 0.85) 0%,
+    rgba(130, 27, 27, 0.55) 38%,
+    rgba(130, 27, 27, 0) 62%
+  );
+}

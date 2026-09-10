@@ -2,9 +2,9 @@ import Icon from '../Icon/Icon.jsx';
 import './Work.css';
 
 const PROJECTS = [
-  { id: 'after-11-perfume-1', title: 'After 11 Perfume', summary: 'Full brand identity and packaging for a specialty roaster from naming to shelf.', image: '/images/work-after-11.jpg' },
+  { id: 'after-11-perfume-1', title: 'After 11 Perfume', summary: 'Full brand identity and packaging for a specialty roaster from naming to shelf.', image: '/assets/After11.png' },
   { id: 'zenzy-pay', title: 'Zenzy Pay', summary: 'Full brand identity and packaging for a specialty roaster from naming to shelf.', image: '/images/work-zenzy-pay.jpg' },
-  { id: 'after-11-perfume-2', title: 'After 11 Perfume', summary: 'Full brand identity and packaging for a specialty roaster from naming to shelf.', image: '/images/work-after-11.jpg' },
+  { id: 'after-11-perfume-2', title: 'After 11 Perfume', summary: 'Full brand identity and packaging for a specialty roaster from naming to shelf.', image: '/assets/After11.png' },
 ];
 
 export default function Work() {
@@ -19,10 +19,10 @@ export default function Work() {
           <div className="work__controls">
             <span className="work__counter">1/6</span>
             <button type="button" className="work__nav-btn" aria-label="Previous project">
-              <Icon name="arrow_back" size={20} />
+              <img src="/assets/Carousel nav — previous.svg" alt="" width={88} height={88} />
             </button>
             <button type="button" className="work__nav-btn" aria-label="Next project">
-              <Icon name="arrow_forward" size={20} />
+              <img src="/assets/Carousel nav — next.svg" alt="" width={88} height={88} />
             </button>
           </div>
         </div>
@@ -35,6 +35,7 @@ export default function Work() {
                 <h3 className="work__card-title">{project.title}</h3>
                 <p className="work__card-summary">{project.summary}</p>
               </div>
+              {/* Frame 447 (arrow-circle, node 2329:200) not supplied yet — Material Symbol kept as placeholder */}
               <span className="work__card-link" aria-hidden="true">
                 <Icon name="north_east" size={18} />
               </span>

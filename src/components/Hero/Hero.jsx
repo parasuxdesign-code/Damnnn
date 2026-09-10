@@ -6,13 +6,22 @@ export default function Hero() {
     <section className="hero" aria-label="Introduction">
       <HeroVideo />
       <div className="container hero__content">
-        <div className="hero__logo-block">
-          <h1 className="hero__title">DAMNNN.</h1>
-          <p className="hero__subtitle">Creative Studio</p>
-        </div>
+        <img
+          className="hero__logo-block"
+          src="/assets/DAMNNN wordmark (hero).svg"
+          alt="DAMNNN. Creative Studio"
+          width={679}
+          height={281}
+        />
 
         <div className="hero__pitch">
-          <span className="hero__asterisk" aria-hidden="true">✳</span>
+          <img
+            className="hero__asterisk"
+            src="/assets/Asterisk mark (large).svg"
+            alt=""
+            width={98}
+            height={98}
+          />
           <div className="hero__pitch-copy">
             <p className="hero__tagline">
               <span className="hero__tagline-line">You bring the vision</span>

@@ -24,19 +24,13 @@
 }
 
 .site-header__logo {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: var(--color-white);
+  display: flex;
+  align-items: center;
 }
 
 .site-header__menu-toggle,
 .site-header__action-btn {
-  width: 24px;
-  height: 24px;
   background: transparent;
-  color: var(--color-white);
   border: none;
   display: flex;
   align-items: center;

@@ -1,4 +1,3 @@
-import Icon from '../Icon/Icon.jsx';
 import './ServicesMarquee.css';
 
 const SERVICES = [
@@ -18,7 +17,13 @@ export default function ServicesMarquee() {
         {SERVICES.map((service) => (
           <li key={service} className="services-marquee__item">
             <span>{service}</span>
-            <Icon name="auto_awesome" size={14} className="services-marquee__dot" />
+            <img
+              className="services-marquee__dot"
+              src="/assets/Asterisk mark (small).svg"
+              alt=""
+              width={41}
+              height={41}
+            />
           </li>
         ))}
       </ul>

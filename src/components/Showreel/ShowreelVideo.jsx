@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Icon from '../Icon/Icon.jsx';
 import './ShowreelVideo.css';
 
 /**
@@ -40,14 +39,16 @@ export default function ShowreelVideo() {
         Your browser does not support the video tag.
       </video>
 
-      <button
-        type="button"
-        className="showreel-video__play"
-        onClick={handlePlayToggle}
-        aria-label={isPlaying ? 'Pause showreel' : 'Play showreel'}
-      >
-        <Icon name={isPlaying ? 'pause' : 'play_arrow'} size={28} />
-      </button>
+      {!isPlaying && (
+        <button
+          type="button"
+          className="showreel-video__play"
+          onClick={handlePlayToggle}
+          aria-label="Play showreel"
+        >
+          <img src="/assets/Play-circle icon (showreel).png" alt="" width={82} height={82} />
+        </button>
+      )}
     </div>
   );
 }

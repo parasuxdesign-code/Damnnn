@@ -1,10 +1,9 @@
-import Icon from '../Icon/Icon.jsx';
 import './Footer.css';
 
 const SOCIALS = [
-  { label: 'Instagram', icon: 'photo_camera', href: '#' },
-  { label: 'LinkedIn', icon: 'link', href: '#' },
-  { label: 'Email us', icon: 'mail', href: 'mailto:hello@damnnn.studio' },
+  { label: 'Instagram', icon: '/assets/Instagram icon.svg', href: '#' },
+  { label: 'LinkedIn', icon: '/assets/LinkedIn icon (footer).png', href: '#' },
+  { label: 'Email us', icon: '/assets/Globe:email icon.svg', href: 'mailto:hello@damnnn.studio' },
 ];
 
 export default function Footer() {
@@ -12,8 +11,13 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__row">
         <div className="site-footer__brand-block">
-          <p className="site-footer__logo">DAMNNN.</p>
-          <p className="site-footer__tagline">Creative Studio</p>
+          <img
+            className="site-footer__logo"
+            src="/assets/ DAMNNN wordmark (footer).svg"
+            alt="DAMNNN. Creative Studio"
+            width={172}
+            height={71}
+          />
           <p className="site-footer__copyright">
             © 2026 DAMNNN. Made with questionable amounts of coffee.
           </p>
@@ -23,7 +27,7 @@ export default function Footer() {
           {SOCIALS.map((social) => (
             <li key={social.label}>
               <a href={social.href} className="site-footer__social-link">
-                <Icon name={social.icon} size={18} />
+                <img src={social.icon} alt="" width={28} height={28} />
                 {social.label}
               </a>
             </li>

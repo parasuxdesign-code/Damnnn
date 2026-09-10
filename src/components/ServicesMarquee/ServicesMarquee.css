@@ -23,5 +23,5 @@
 }
 
 .services-marquee__dot {
-  color: var(--color-red);
+  flex-shrink: 0;
 }

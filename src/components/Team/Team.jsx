@@ -1,9 +1,8 @@
-import Icon from '../Icon/Icon.jsx';
 import './Team.css';
 
 const MEMBERS = [
-  { id: 'adarsh', name: 'Adarsh', role: 'Chief Damnnn Officer', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/images/team-adarsh.png' },
-  { id: 'paras', name: 'Paras', role: 'Chief Damnnn Officer', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/images/team-paras.png' },
+  { id: 'adarsh', name: 'Adarsh', role: 'Chief Damnnn Officer', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/assets/Crew photos.png' },
+  { id: 'paras', name: 'Paras', role: 'Chief Damnnn Officer', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/assets/Crew photos1.png' },
 ];
 
 export default function Team() {
@@ -30,7 +29,7 @@ export default function Team() {
                   href="#"
                   aria-label={`${member.name} on LinkedIn`}
                 >
-                  <Icon name="link" size={18} />
+                  <img src="/assets/LinkedIn icon (crew card).png" alt="" width={28} height={28} />
                   Linkedin &rarr;
                 </a>
               </div>

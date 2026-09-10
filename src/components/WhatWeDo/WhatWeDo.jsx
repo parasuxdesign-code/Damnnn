@@ -23,7 +23,7 @@ export default function WhatWeDo() {
           </h2>
           <img
             className="what-we-do__mascot"
-            src="/images/mascot-chair.png"
+            src="/assets/mascot-chair 1.png"
             alt="DAMNNN studio mascot sitting in a chair"
           />
         </div>

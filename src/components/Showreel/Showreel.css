@@ -1,6 +1,12 @@
 .showreel {
   background: var(--color-bg);
   overflow: hidden;
+  padding-top: var(--space-6);
+}
+
+.showreel .container {
+  position: relative;
+  z-index: 1;
 }
 
 .showreel__bg-text {

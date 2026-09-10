@@ -13,21 +13,39 @@
   justify-content: space-between;
 }
 
+.site-header__brand,
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-black);
+  border-radius: 999px;
+  padding: var(--space-1);
+  padding-left: var(--space-4);
+}
+
+.site-header__actions {
+  padding-left: var(--space-2);
+}
+
 .site-header__logo {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
+  color: var(--color-white);
 }
 
-.site-header__menu-toggle {
-  width: 40px;
-  height: 40px;
+.site-header__menu-toggle,
+.site-header__action-btn {
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: var(--color-black);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }

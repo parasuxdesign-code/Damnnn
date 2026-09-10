@@ -19,7 +19,7 @@
 
 .work__title {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   font-size: var(--fs-h1);
   text-transform: uppercase;
   line-height: 1.05;
@@ -82,7 +82,7 @@
 
 .work__card-title {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 1.1rem;
 }

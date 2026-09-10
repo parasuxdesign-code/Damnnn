@@ -9,7 +9,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   font-size: clamp(3rem, 14vw, 10rem);
   color: rgba(255, 255, 255, 0.04);
   white-space: nowrap;
@@ -25,7 +25,7 @@
 
 .cta__title {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   font-size: var(--fs-h1);
   text-transform: uppercase;
   line-height: 1.05;

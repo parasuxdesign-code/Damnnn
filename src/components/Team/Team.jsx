@@ -1,8 +1,9 @@
+import Icon from '../Icon/Icon.jsx';
 import './Team.css';
 
 const MEMBERS = [
-  { id: 'adarsh', name: 'Adarsh', role: 'Client Servicing Director', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/images/team-adarsh.jpg' },
-  { id: 'paras', name: 'Paras', role: 'Client Servicing Director', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/images/team-paras.jpg' },
+  { id: 'adarsh', name: 'Adarsh', role: 'Client Servicing Director', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/images/team-adarsh.png' },
+  { id: 'paras', name: 'Paras', role: 'Client Servicing Director', bio: 'Runs strategy and delivery. Keeps the work sharp on brief and on time.', photo: '/images/team-paras.png' },
 ];
 
 export default function Team() {
@@ -18,18 +19,24 @@ export default function Team() {
         <ul className="team__list">
           {MEMBERS.map((member) => (
             <li key={member.id} className="team__card">
-              <img className="team__photo" src={member.photo} alt={member.name} />
+              <div className="team__photo-frame">
+                <img className="team__photo" src={member.photo} alt={member.name} />
+              </div>
               <div className="team__card-body">
-                <h3 className="team__name">{member.name}</h3>
-                <p className="team__role">{member.role}</p>
+                <div className="team__card-heading">
+                  <div>
+                    <h3 className="team__name">{member.name}</h3>
+                    <p className="team__role">{member.role}</p>
+                  </div>
+                  <a
+                    className="team__linkedin"
+                    href="#"
+                    aria-label={`${member.name} on LinkedIn`}
+                  >
+                    <Icon name="link" size={18} />
+                  </a>
+                </div>
                 <p className="team__bio">{member.bio}</p>
-                <a
-                  className="team__linkedin"
-                  href="#"
-                  aria-label={`${member.name} on LinkedIn`}
-                >
-                  in LinkedIn
-                </a>
               </div>
             </li>
           ))}

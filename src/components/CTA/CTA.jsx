@@ -1,3 +1,4 @@
+import Icon from '../Icon/Icon.jsx';
 import './CTA.css';
 
 export default function CTA() {
@@ -17,6 +18,7 @@ export default function CTA() {
           </p>
           <a href="mailto:hello@damnnn.studio" className="btn btn--primary cta__button">
             Start a project
+            <Icon name="arrow_outward" size={18} />
           </a>
         </div>
         <img

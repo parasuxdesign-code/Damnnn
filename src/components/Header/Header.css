@@ -15,7 +15,7 @@
 
 .site-header__logo {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
 }
@@ -25,22 +25,9 @@
   height: 40px;
   border-radius: 50%;
   background: var(--color-black);
+  color: var(--color-white);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.site-header__menu-icon,
-.site-header__menu-icon::before,
-.site-header__menu-icon::after {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 2px;
-  background: var(--color-white);
-  position: relative;
-}
-
-.site-header__menu-icon::before { position: absolute; top: -5px; }
-.site-header__menu-icon::after { position: absolute; top: 5px; }

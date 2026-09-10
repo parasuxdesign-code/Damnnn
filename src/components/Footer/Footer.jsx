@@ -1,4 +1,11 @@
+import Icon from '../Icon/Icon.jsx';
 import './Footer.css';
+
+const SOCIALS = [
+  { label: 'Instagram', icon: 'photo_camera', href: '#' },
+  { label: 'LinkedIn', icon: 'link', href: '#' },
+  { label: 'Email us', icon: 'mail', href: 'mailto:hello@damnnn.studio' },
+];
 
 export default function Footer() {
   return (
@@ -10,14 +17,19 @@ export default function Footer() {
         </div>
 
         <ul className="site-footer__socials">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="mailto:hello@damnnn.studio">Email us</a></li>
+          {SOCIALS.map((social) => (
+            <li key={social.label}>
+              <a href={social.href} className="site-footer__social-link">
+                <Icon name={social.icon} size={18} />
+                {social.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="container">
         <p className="site-footer__copyright">
-          © 2026 DAMNNN. Book quotation and quote about of the creative.
+          © 2026 DAMNNN. Good ideas, good people.
         </p>
       </div>
     </footer>

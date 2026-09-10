@@ -1,13 +1,14 @@
 import { useRef, useState } from 'react';
+import Icon from '../Icon/Icon.jsx';
 import './ShowreelVideo.css';
 
 /**
- * Dedicated video component for the showreel.
- * Drop the provided MP4 at public/videos/showreel.mp4 — this path is wired up
- * and ready; do not swap in a different asset.
+ * Dedicated video component for the showreel player.
+ * Currently points at the same hero export (public/videos/hero-section.mp4)
+ * as a working placeholder — swap in a dedicated showreel cut at
+ * public/videos/showreel.mp4 and update VIDEO_SRC when it's ready.
  */
-const VIDEO_SRC = '/videos/showreel.mp4';
-const POSTER_SRC = '/images/showreel-poster.jpg';
+const VIDEO_SRC = '/videos/hero-section.mp4';
 
 export default function ShowreelVideo() {
   const videoRef = useRef(null);
@@ -31,7 +32,6 @@ export default function ShowreelVideo() {
         ref={videoRef}
         className="showreel-video__element"
         src={VIDEO_SRC}
-        poster={POSTER_SRC}
         controls={false}
         playsInline
         onPause={() => setIsPlaying(false)}
@@ -46,7 +46,7 @@ export default function ShowreelVideo() {
         onClick={handlePlayToggle}
         aria-label={isPlaying ? 'Pause showreel' : 'Play showreel'}
       >
-        {isPlaying ? '❚❚' : '▶'}
+        <Icon name={isPlaying ? 'pause' : 'play_arrow'} size={28} />
       </button>
     </div>
   );

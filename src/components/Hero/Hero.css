@@ -67,4 +67,21 @@
   align-self: flex-start;
   min-width: 177px;
   height: 62px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow var(--duration-base) var(--ease-out);
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hero__cta-arrow {
+  display: inline-block;
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.hero__cta:hover .hero__cta-arrow,
+.hero__cta:focus-visible .hero__cta-arrow {
+  transform: translateX(4px);
 }

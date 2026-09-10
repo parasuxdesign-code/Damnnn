@@ -33,7 +33,7 @@ export default function Hero() {
               className="btn btn--primary hero__cta js-enter"
               style={{ '--enter-delay': '480ms' }}
             >
-              Let's Talk &nbsp;-&gt;
+              Let's Talk &nbsp;<span className="hero__cta-arrow">-&gt;</span>
             </a>
           </div>
         </div>

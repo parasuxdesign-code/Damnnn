@@ -2,10 +2,17 @@ import './HeroOverlay.css';
 
 /**
  * Dedicated depth layer between the Hero video and the Hero content.
- * Its own component so the overlap/fade zone can be tuned independently
- * later (size, position, color stops) without touching the video or
- * content layers. Purely decorative — never intercepts pointer events.
+ * Its own component so it can be tuned independently later without
+ * touching the video or content layers. Purely decorative — never
+ * intercepts pointer events.
  */
 export default function HeroOverlay() {
-  return <div className="hero-overlay" aria-hidden="true" />;
+  return (
+    <img
+      className="hero-overlay"
+      src="/assets/hero-background.png"
+      alt=""
+      aria-hidden="true"
+    />
+  );
 }

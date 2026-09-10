@@ -1,6 +1,5 @@
 import Header from './components/Header/Header.jsx';
 import Hero from './components/Hero/Hero.jsx';
-import ServicesMarquee from './components/ServicesMarquee/ServicesMarquee.jsx';
 import Showreel from './components/Showreel/Showreel.jsx';
 import WhatWeDo from './components/WhatWeDo/WhatWeDo.jsx';
 import Work from './components/Work/Work.jsx';
@@ -15,7 +14,6 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ServicesMarquee />
         <Showreel />
         <WhatWeDo />
         <Work />

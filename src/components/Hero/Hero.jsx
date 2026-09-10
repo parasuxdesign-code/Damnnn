@@ -1,5 +1,6 @@
 import HeroBackground from './HeroBackground.jsx';
 import HeroVideo from './HeroVideo.jsx';
+import ServicesMarquee from '../ServicesMarquee/ServicesMarquee.jsx';
 import InlineSvg from '../Icon/InlineSvg.jsx';
 import asteriskLargeSvg from '../../assets/icons/asterisk-large.svg?raw';
 import './Hero.css';
@@ -40,6 +41,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <ServicesMarquee />
     </section>
   );
 }

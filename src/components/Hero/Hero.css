@@ -20,6 +20,22 @@
 }
 
 /**
+ * Ticker band restored at the Hero's own bottom edge. ServicesMarquee
+ * itself (markup, styling, animation) is untouched — this only
+ * positions its root element as a full-width band pinned to the
+ * bottom of .hero, independent of the video/content flow, matching
+ * the previous treatment. z-index 2 keeps it above the background (0)
+ * and video (1), same tier as the content.
+ */
+.hero .services-marquee {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/**
  * Mobile: .hero-video becomes an in-flow block at this breakpoint (see
  * HeroVideo.css), so .hero needs to stack its two flex children
  * (content, video) vertically instead of the desktop row layout, with

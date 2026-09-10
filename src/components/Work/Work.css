@@ -1,52 +1,55 @@
 .work {
-  background: var(--color-red);
+  background: var(--gradient-red);
   color: var(--color-black);
   overflow: hidden;
 }
 
 .work .eyebrow {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .work__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: var(--space-6);
+  align-items: flex-start;
+  margin-bottom: var(--space-7);
   gap: var(--space-4);
   flex-wrap: wrap;
 }
 
 .work__title {
-  font-family: var(--font-display);
-  font-weight: 400;
+  color: var(--color-white);
   font-size: var(--fs-h1);
-  text-transform: uppercase;
-  line-height: 1.05;
+  line-height: var(--lh-heading);
 }
 
 .work__controls {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .work__counter {
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--color-white);
 }
 
 .work__nav-btn {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
-  color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .work__track {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-6);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: var(--space-2);
@@ -54,14 +57,15 @@
 
 .work__card {
   position: relative;
-  flex: 0 0 clamp(220px, 30vw, 340px);
+  flex: 0 0 clamp(260px, 34vw, 480px);
   scroll-snap-align: start;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  background: var(--color-bg-panel);
-  aspect-ratio: 3 / 4;
+  background: var(--color-white);
+  aspect-ratio: 719 / 544;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 33px 60px 0 rgba(0, 0, 0, 0.25);
 }
 
 .work__image {
@@ -76,20 +80,21 @@
   position: relative;
   margin-top: auto;
   padding: var(--space-4);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  background: rgba(12, 12, 12, 0.52);
   color: var(--color-white);
 }
 
 .work__card-title {
   font-family: var(--font-display);
-  font-weight: 400;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
 }
 
 .work__card-summary {
-  font-size: var(--fs-small);
-  color: var(--color-muted);
+  font-family: var(--font-eyebrow-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
   margin-top: var(--space-2);
 }
 
@@ -97,11 +102,11 @@
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--color-red);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;

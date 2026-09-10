@@ -1,5 +1,24 @@
 .team {
   background: var(--color-black);
+  overflow: hidden;
+}
+
+.team .container {
+  position: relative;
+  z-index: 1;
+}
+
+.team__bg-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: var(--fs-ghost-lg);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .team__title {
@@ -8,8 +27,10 @@
 }
 
 .team__intro {
+  font-family: var(--font-eyebrow-body);
+  font-size: var(--fs-lead);
   color: var(--color-muted);
-  max-width: 480px;
+  max-width: 520px;
   margin-bottom: var(--space-7);
 }
 
@@ -20,68 +41,59 @@
 }
 
 .team__card {
-  background: var(--color-bg-panel);
-  border-radius: var(--radius-md);
+  position: relative;
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.team__photo-frame {
-  background: linear-gradient(180deg, var(--color-red-dark) 0%, var(--color-bg-panel) 100%);
+  min-height: 520px;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
 }
 
 .team__photo {
-  width: auto;
-  height: 105%;
-  object-fit: contain;
-  object-position: bottom;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 0;
 }
 
 .team__card-body {
-  padding: var(--space-4) var(--space-5) var(--space-5);
-}
-
-.team__card-heading {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-3);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: rgba(12, 12, 12, 0.6);
+  padding: var(--space-5);
+  text-align: right;
 }
 
 .team__name {
-  font-size: 1.5rem;
+  font-size: var(--fs-h2);
 }
 
 .team__role {
-  font-size: var(--fs-eyebrow);
+  font-family: var(--font-eyebrow-body);
+  font-size: 1.125rem;
   text-transform: uppercase;
   color: var(--color-red);
-  letter-spacing: 0.08em;
   margin-top: var(--space-1);
 }
 
 .team__bio {
-  color: var(--color-muted);
-  font-size: var(--fs-small);
+  font-family: var(--font-eyebrow-body);
+  color: var(--color-white);
+  font-size: var(--fs-lead);
   margin-top: var(--space-3);
 }
 
 .team__linkedin {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  flex-shrink: 0;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-family: var(--font-eyebrow-body);
+  font-size: 1.125rem;
 }
 
 @media (max-width: 700px) {

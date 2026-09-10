@@ -18,7 +18,7 @@ export default function Work() {
       <div className="container">
         <div className="work__header">
           <div>
-            <p className="eyebrow">What we do</p>
+            <p className="eyebrow">WHAT WE DO</p>
             <h2 className="work__title">
               Work we're<br />damnn proud of
             </h2>

@@ -11,13 +11,14 @@
 
 .showreel__bg-text {
   position: absolute;
-  top: var(--space-4);
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(3rem, 12vw, 8rem);
+  font-size: var(--fs-ghost-lg);
+  line-height: 1;
   color: rgba(255, 255, 255, 0.04);
   white-space: nowrap;
   pointer-events: none;
+  text-transform: uppercase;
 }

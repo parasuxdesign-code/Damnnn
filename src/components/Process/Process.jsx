@@ -1,17 +1,17 @@
 import './Process.css';
 
 const STEPS = [
-  { index: '01', title: 'Discover', description: 'We learn your business, your users, and the problem worth solving before we touch a single pixel.' },
-  { index: '02', title: 'Define', description: 'We turn findings into a clear brief: scope, priorities, and success criteria everyone agrees on.' },
-  { index: '03', title: 'Design', description: 'We shape the product — structure, flow, and visual language — and validate it before build.' },
-  { index: '04', title: 'Deliver', description: 'We build, test, and ship, then hand off a product your team can run with.' },
+  { index: '01', title: 'Discover', description: 'Understand the problem, ambition and opportunity', variant: 'light' },
+  { index: '02', title: 'Define', description: 'Understand the problem, ambition and opportunity', variant: 'light' },
+  { index: '03', title: 'Design', description: 'Understand the problem, ambition and opportunity', variant: 'accent' },
+  { index: '04', title: 'Deliver', description: 'Understand the problem, ambition and opportunity', variant: 'accent' },
 ];
 
 export default function Process() {
   return (
     <section className="process section" aria-label="How we work">
       <div className="container">
-        <p className="eyebrow">How we work</p>
+        <p className="eyebrow">HOW WE WORK</p>
         <h2 className="process__title">
           Good work doesn't<br />just happen.
         </h2>
@@ -20,12 +20,13 @@ export default function Process() {
         </p>
 
         <ol className="process__steps">
-          {STEPS.map((step, i) => (
+          {STEPS.map((step) => (
             <li
               key={step.index}
-              className={`process__step${i >= 2 ? ' process__step--accent' : ''}`}
+              className={`process__step process__step--${step.variant}`}
             >
-              <span className="process__step-index">{step.index}</span>
+              <span className="process__step-index" aria-hidden="true">{step.index.replace('0', '')}</span>
+              <span className="process__step-dot" />
               <h3 className="process__step-title">{step.title}</h3>
               <p className="process__step-description">{step.description}</p>
             </li>

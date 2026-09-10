@@ -8,19 +8,6 @@
   z-index: 1;
 }
 
-.cta__bg-text {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(3rem, 14vw, 10rem);
-  color: rgba(255, 255, 255, 0.04);
-  white-space: nowrap;
-  pointer-events: none;
-}
-
 .cta__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -29,11 +16,7 @@
 }
 
 .cta__title {
-  font-family: var(--font-display);
-  font-weight: 400;
   font-size: var(--fs-h1);
-  text-transform: uppercase;
-  line-height: 1.05;
   margin-bottom: var(--space-4);
 }
 
@@ -42,13 +25,19 @@
 }
 
 .cta__copy {
+  font-family: var(--font-eyebrow-body);
+  font-size: var(--fs-lead);
   color: var(--color-muted);
-  max-width: 420px;
+  max-width: 480px;
   margin-bottom: var(--space-5);
 }
 
+.cta__button {
+  font-size: 0.875rem;
+}
+
 .cta__image {
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   width: 100%;
 }
 

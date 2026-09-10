@@ -1,24 +1,22 @@
-import Icon from '../Icon/Icon.jsx';
 import './CTA.css';
 
 export default function CTA() {
   return (
     <section id="contact" className="cta section" aria-label="Contact us">
-      <span className="cta__bg-text" aria-hidden="true">DAMNNN</span>
       <div className="container cta__grid">
         <div className="cta__content">
-          <p className="eyebrow">Ideas everywhere</p>
+          <p className="eyebrow">IDEAS EVERY WHERE</p>
           <h2 className="cta__title">
             Let's make it<br />
             <span className="cta__title-accent">damnnn good.</span>
           </h2>
           <p className="cta__copy">
-            Got a rough idea? A big problem? Or just what if...? Bring it over.
-            We'll turn this messy thinking into something worth shipping.
+            Got a rough idea? A big problem? or just what if...?
+            <br />
+            Bring it over. We'll turn the messy thinking into something worth shipping.
           </p>
-          <a href="mailto:hello@damnnn.studio" className="btn btn--primary cta__button">
-            Start a project
-            <Icon name="arrow_outward" size={18} />
+          <a href="mailto:hello@damnnn.studio" className="btn btn--accent cta__button">
+            Start A Project &nbsp;-&gt;
           </a>
         </div>
         <img

@@ -1,5 +1,4 @@
 import HeroVideo from './HeroVideo.jsx';
-import Icon from '../Icon/Icon.jsx';
 import './Hero.css';
 
 export default function Hero() {
@@ -7,19 +6,23 @@ export default function Hero() {
     <section className="hero" aria-label="Introduction">
       <HeroVideo />
       <div className="container hero__content">
-        <Icon name="auto_awesome" className="hero__eyebrow-icon" size={28} />
-        <h1 className="hero__title">
-          DAMNNN.
-          <span className="hero__subtitle">Creative Studio</span>
-        </h1>
-        <p className="hero__tagline">
-          You bring the vision<br />
-          We make it <strong>DAMNNN</strong> good
-        </p>
-        <a href="#contact" className="btn btn--primary hero__cta">
-          Let's talk
-          <Icon name="arrow_outward" size={18} />
-        </a>
+        <div className="hero__logo-block">
+          <h1 className="hero__title">DAMNNN.</h1>
+          <p className="hero__subtitle">Creative Studio</p>
+        </div>
+
+        <div className="hero__pitch">
+          <span className="hero__asterisk" aria-hidden="true">✳</span>
+          <div className="hero__pitch-copy">
+            <p className="hero__tagline">
+              <span className="hero__tagline-line">You bring the vision</span>
+              <span className="hero__tagline-line">
+                We make it <strong>DAMNNN good</strong>
+              </span>
+            </p>
+            <a href="#contact" className="btn btn--primary hero__cta">Let's Talk &nbsp;-&gt;</a>
+          </div>
+        </div>
       </div>
     </section>
   );

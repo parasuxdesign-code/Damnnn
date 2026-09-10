@@ -1,7 +1,5 @@
 .services-marquee {
   background: var(--color-black);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
   overflow-x: auto;
 }
 
@@ -9,7 +7,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-6);
-  padding: var(--space-3) var(--container-pad);
+  padding: var(--space-4) var(--container-pad);
   white-space: nowrap;
   width: max-content;
 }
@@ -18,10 +16,10 @@
   display: flex;
   align-items: center;
   gap: var(--space-6);
-  font-size: var(--fs-small);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .services-marquee__dot {

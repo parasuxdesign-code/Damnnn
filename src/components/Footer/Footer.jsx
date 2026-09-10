@@ -11,9 +11,12 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container site-footer__row">
-        <div>
+        <div className="site-footer__brand-block">
           <p className="site-footer__logo">DAMNNN.</p>
           <p className="site-footer__tagline">Creative Studio</p>
+          <p className="site-footer__copyright">
+            © 2026 DAMNNN. Made with questionable amounts of coffee.
+          </p>
         </div>
 
         <ul className="site-footer__socials">
@@ -26,11 +29,6 @@ export default function Footer() {
             </li>
           ))}
         </ul>
-      </div>
-      <div className="container">
-        <p className="site-footer__copyright">
-          © 2026 DAMNNN. Good ideas, good people.
-        </p>
       </div>
     </footer>
   );

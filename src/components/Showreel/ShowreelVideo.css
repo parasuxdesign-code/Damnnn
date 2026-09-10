@@ -1,9 +1,9 @@
 .showreel-video {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border-radius: var(--radius-md);
+  aspect-ratio: 1208 / 719;
+  background: var(--color-black);
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
@@ -18,13 +18,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(0, 0, 0, 0.3);
   color: var(--color-white);
-  font-size: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -17,7 +17,7 @@ export default function WhatWeDo() {
     <section className="what-we-do section" aria-label="What we do">
       <div className="container what-we-do__grid">
         <div className="what-we-do__intro">
-          <p className="eyebrow">What we do</p>
+          <p className="eyebrow">WHAT WE DO</p>
           <h2 className="what-we-do__title">
             We make ideas<br />look damnn good.
           </h2>

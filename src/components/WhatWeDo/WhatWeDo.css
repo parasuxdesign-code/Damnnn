@@ -67,6 +67,10 @@
   margin-top: var(--space-2);
 }
 
+.what-we-do__card--expanded .what-we-do__card-subtitle {
+  color: var(--color-white);
+}
+
 .what-we-do__card-index {
   position: absolute;
   right: calc(var(--space-7) * -1);

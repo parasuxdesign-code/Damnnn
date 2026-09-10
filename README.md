@@ -26,10 +26,27 @@ src/
     Footer/           site footer
   styles/
     tokens.css        design tokens (color, type, spacing, layout)
+    motion-tokens.css motion CSS custom properties + prefers-reduced-motion rules
     global.css        resets + container/grid/section primitives
+  motion/
+    tokens.js             central duration/easing/scroll config (JS side)
+    SmoothScrollProvider.jsx  Lenis integration, mounted once at the app root
+    useReducedMotion.js       live prefers-reduced-motion hook
 ```
 
 Each section is a self-contained component with its own CSS file, so any section can be restyled or restructured independently.
+
+## Motion foundation
+
+`src/motion/` is global infrastructure, not section animation:
+
+- **Smooth scroll** — [Lenis](https://github.com/darkroomengineering/lenis) is mounted once in `SmoothScrollProvider` (wrapped around `<App />` in `main.jsx`) and drives its own `requestAnimationFrame` loop. Desktop wheel/trackpad scrolling is smoothed; touch devices keep native scroll/momentum (`syncTouch: false`) rather than fighting the OS.
+- **Reduced motion** — `useReducedMotion()` watches `prefers-reduced-motion` live. When it's set, Lenis is never instantiated, `<html>` never gets Lenis's `.lenis`/`.lenis-smooth` classes, and both native and anchor-link scrolling fall back to instant (`scroll-behavior: auto`) rather than smooth.
+- **Anchor links** — same-page `href="#id"` clicks are intercepted app-wide and routed through Lenis's `scrollTo` (or a native `scrollIntoView` fallback when Lenis is off), so e.g. the Hero's "Let's Talk" button scrolls smoothly to the CTA section's `#contact` id.
+- **Tokens** — `src/motion/tokens.js` (duration/easing/scroll config, for JS) and `src/styles/motion-tokens.css` (the same durations/easings as CSS custom properties, e.g. `--duration-base`, `--ease-out`) are the single source of truth future section animations should read from rather than hardcoding numbers.
+- **`useSmoothScroll()`** exposes the shared Lenis instance and a `scrollTo` helper to any component that needs to trigger a scroll programmatically later.
+
+This pass is infrastructure only — no section-specific reveals, parallax, or scroll-triggered animation exist yet.
 
 ## Video asset
 

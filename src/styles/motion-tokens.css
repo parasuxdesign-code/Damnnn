@@ -1,0 +1,54 @@
+/**
+ * CSS-side mirror of src/motion/tokens.js — kept in sync by hand since
+ * CSS can't import JS values. Any future section transition should
+ * reference these custom properties rather than hardcoding numbers.
+ */
+:root {
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  --duration-slower: 900ms;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+
+  --transition-base: var(--duration-base) var(--ease-standard);
+}
+
+/**
+ * When the smooth-scroll layer is active, Lenis drives scroll position
+ * itself; native CSS smooth-scrolling would double up with it, so it's
+ * disabled here and re-enabled only as the reduced-motion fallback below.
+ */
+html.lenis {
+  scroll-behavior: auto;
+}
+
+html.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/**
+ * Respect prefers-reduced-motion at the foundation level: the
+ * SmoothScrollProvider skips Lenis entirely in this case, and native
+ * browser scrolling (including anchor jumps) falls back to instant
+ * (`auto`) rather than smooth, which is the correct reduced-motion
+ * behavior — smooth/eased scrolling is itself a motion effect some
+ * users need switched off, not just Lenis's specific implementation.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

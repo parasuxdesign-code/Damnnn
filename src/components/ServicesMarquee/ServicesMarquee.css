@@ -1,0 +1,29 @@
+.services-marquee {
+  background: var(--color-black);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+.services-marquee__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-3) var(--container-pad);
+  white-space: nowrap;
+  width: max-content;
+}
+
+.services-marquee__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.services-marquee__dot {
+  color: var(--color-red);
+}

@@ -1,0 +1,16 @@
+/**
+ * Explicit layer order for the whole Hero (see Hero.css too):
+ *   1. .hero-background  z-index: 0  (this file — lowest)
+ *   2. .hero-video       z-index: 1  (HeroVideo.css)
+ *   3. .hero__content    z-index: 2  (Hero.css)
+ * Header is a separate section with its own much higher z-index.
+ */
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}

@@ -19,6 +19,28 @@
   max-width: 680px;
 }
 
+/**
+ * Mobile: .hero-video becomes an in-flow block at this breakpoint (see
+ * HeroVideo.css), so .hero needs to stack its two flex children
+ * (content, video) vertically instead of the desktop row layout, with
+ * content always first so the video can never sit over/cover text.
+ * min-height is relaxed since 720px is sized for the desktop
+ * side-by-side composition, not a stacked mobile one.
+ */
+@media (max-width: 860px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    gap: var(--space-6);
+  }
+
+  .hero__content {
+    order: 1;
+    max-width: 100%;
+  }
+}
+
 .hero__logo-block {
   width: 100%;
   max-width: 679px;

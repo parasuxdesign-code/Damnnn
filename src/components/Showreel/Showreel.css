@@ -1,7 +1,20 @@
 .showreel {
+  position: relative;
+  z-index: 1;
   background: var(--color-bg);
   overflow: hidden;
   padding-top: var(--space-6);
+  /*
+   * Cinematic Hero -> Showreel handoff: Showreel is pulled up over the
+   * Hero's bottom edge (negative margin) and given a rounded leading
+   * edge + shadow, so the two sections read as overlapping layers
+   * during the scroll transition rather than a hard, isolated cut.
+   * Kept as a static (non-scroll-driven) overlap, per the "restrained"
+   * brief — no scroll-linked JS/pin, transform/opacity only.
+   */
+  margin-top: calc(var(--space-8) * -1);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 -40px 60px rgba(0, 0, 0, 0.35);
 }
 
 .showreel .container {

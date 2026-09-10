@@ -17,7 +17,6 @@ export default function HeroVideo() {
         loop
         playsInline
       />
-      <div className="hero-video__overlay" />
     </div>
   );
 }

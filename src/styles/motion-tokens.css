@@ -52,3 +52,65 @@ html.lenis.lenis-smooth [data-lenis-prevent] {
     scroll-behavior: auto !important;
   }
 }
+
+/**
+ * Shared keyframes for section-level motion. Kept here (not per
+ * component) so any future section reveal reuses the same curve
+ * instead of every component defining its own fade-up.
+ *
+ * Entrance animations are opt-in per element via a `.js-enter` class
+ * with an `--enter-delay` custom property for stagger; the *default*
+ * state (no class, or reduced motion) is fully visible with no
+ * transform, so nothing depends on JS running or the media query
+ * matching to be seen.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .js-enter {
+    animation: motion-fade-up var(--duration-slow) var(--ease-out) both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+}
+
+@keyframes motion-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/** Continuous slow rotation, e.g. the Hero asterisk mark. */
+.motion-spin-slow {
+  animation: motion-spin 16s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-spin-slow {
+    animation: none;
+  }
+}
+
+@keyframes motion-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/** Seamless infinite horizontal ticker (services marquee). */
+@media (prefers-reduced-motion: reduce) {
+  .motion-marquee-track {
+    animation: none !important;
+  }
+}
+
+@keyframes motion-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -38,3 +38,42 @@
   flex-shrink: 0;
   padding: 0;
 }
+
+/**
+ * Nav panel — see the comment in Header.jsx: no Figma node defines this
+ * treatment, so these are the site's own existing dark-panel tokens
+ * (--color-bg-panel / --color-border), not a sourced "glass" spec.
+ */
+.site-header__panel {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: var(--container-pad);
+  min-width: 200px;
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  transform-origin: top left;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+  pointer-events: none;
+  transition:
+    opacity var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.site-header__panel--open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.site-header__panel-link {
+  display: block;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+}

@@ -7,8 +7,8 @@ import './InlineSvg.css';
  * `<img src="*.svg">`, which is opaque to both. The SVG content itself
  * is untouched; only the wrapper element carries className/style/size.
  */
-export default function InlineSvg({ raw, className = '', size, label }) {
-  const style = size ? { width: size, height: size } : undefined;
+export default function InlineSvg({ raw, className = '', size, style: styleProp, label }) {
+  const style = size ? { width: size, height: size, ...styleProp } : styleProp;
   return (
     <span
       className={`inline-svg ${className}`.trim()}

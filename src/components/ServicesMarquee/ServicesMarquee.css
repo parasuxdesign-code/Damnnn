@@ -1,6 +1,13 @@
 .services-marquee {
   background: var(--color-black);
-  overflow-x: auto;
+  overflow: hidden;
+}
+
+.services-marquee__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: motion-marquee 32s linear infinite;
 }
 
 .services-marquee__list {
@@ -9,7 +16,6 @@
   gap: var(--space-6);
   padding: var(--space-4) var(--container-pad);
   white-space: nowrap;
-  width: max-content;
 }
 
 .services-marquee__item {
@@ -24,4 +30,21 @@
 
 .services-marquee__dot {
   flex-shrink: 0;
+}
+
+/* The gap between the two ServiceList halves must match the item gap,
+   so the seam at the 50% loop point reads identically to every other
+   item-to-item gap in the list. */
+.services-marquee__track > .services-marquee__list + .services-marquee__list {
+  margin-left: var(--space-6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-marquee__track {
+    width: auto;
+  }
+
+  .services-marquee__track .services-marquee__list[aria-hidden] {
+    display: none;
+  }
 }

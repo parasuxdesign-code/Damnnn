@@ -9,14 +9,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero-video__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(232, 48, 48, 0.55) 0%,
-    rgba(130, 27, 27, 0.8) 100%
-  );
+  /*
+   * Figma's Hero frame has no video layer at all (it's a flat gradient
+   * background there) — the MP4 is a supplied asset with no Figma
+   * geometry to source a position from. Shifted right of center so the
+   * video's visual weight doesn't sit directly behind the DAMNNN /
+   * Creative Studio wordmark, which occupies the left ~47% of the
+   * 1440-wide container per node 2329:82/2329:84 (679px wide at x:240
+   * inside a 1440-wide container). No crop/resize — object-fit stays
+   * `cover` and only the focal point (object-position) moves.
+   */
+  object-position: 78% center;
 }

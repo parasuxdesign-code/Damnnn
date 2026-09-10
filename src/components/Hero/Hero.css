@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  z-index: 0;
   background: var(--gradient-red);
   overflow: hidden;
   min-height: 720px;
@@ -31,9 +32,16 @@
 }
 
 .hero__asterisk {
+  display: block;
   width: clamp(3rem, 6vw, 6.125rem);
   aspect-ratio: 1 / 1;
   flex-shrink: 0;
+}
+
+.hero__asterisk .inline-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero__pitch-copy {
